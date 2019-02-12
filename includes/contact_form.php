@@ -46,17 +46,17 @@
         <div class="form row py-5">
             <div class="col-lg-6 contact-form">
 
-                <form action="#" method="post">
+                <form action="../connector_form.php" method="POST">
                     <div class="row">
                         <div class="col-lg-6 fields-grid">
                             <div class="styled-input agile-styled-input-top">
-                                <input type="text" name="First name" required=""> 
+                                <input type="text" name="fname" required=""> 
                                 <label>First Name</label>
                             </div> 
                         </div>
                         <div class="col-lg-6 fields-grid">
                             <div class="styled-input agile-styled-input-top">
-                                <input type="text" name="First name" required=""> 
+                                <input type="text" name="lname" required=""> 
                                 <label>Last Name</label>
                             </div> 
                         </div>
@@ -81,7 +81,7 @@
                     <div class="row">
                         <div class="col-lg-12">
                             <div class="styled-input mt-3">
-                                <textarea></textarea>
+                                <textarea name="details"></textarea>
                                 <label class="text">Discription</label>
                             </div>
                         </div>
@@ -89,15 +89,15 @@
 
                     <div class="row">
                         <div class="col-lg-12">
-                            <label class="radio-inline"><input type="radio" name="optradio" checked>Friends</label>
-                            <label class="radio-inline"><input type="radio" name="optradio">Site</label>
-                            <label class="radio-inline"><input type="radio" name="optradio">Other</label>
+                            <label class="radio-inline"><input type="radio" name="optradio" value="Friends" checked>Friends</label>
+                            <label class="radio-inline px-4"><input type="radio" name="optradio" value="Site">Site</label>
+                            <label class="radio-inline px-4"><input type="radio" name="optradio" value="Other">Other</label>
                         </div>
                     </div>
 
 
                     <div class="py-5"> 
-                        <input type="submit" value="Submit">
+                        <input type="submit" value="Submit" name="submit">
                     </div>
                     
                 </form>

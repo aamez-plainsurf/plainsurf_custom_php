@@ -35,7 +35,38 @@
         <!-- //breadcrumbs -->
 
         <!-- contact -->
-        <?php include_once './includes/contact_form.php'; ?>	
+        <table>
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Mobile No</th>
+                <th>Email-Id</th>
+                <th>Comments</th>
+                <th>Option</th>
+            </tr>
+            <?php
+            $conn = mysqli_connect("localhost", "test1", "test123", "form");
+            if ($conn->connet_error) {
+                die("Connection failed :" . $conn->connect_error);
+            }
+
+            $sql = "SELECT fname, lname, Phone, Email, details, optradio from contact";
+            $result = $conn->query($sql);
+
+            if ($result->num_rows > 0) {
+                while ($row = $result->fetch_assoc()) {
+                    echo "<tr><td>" . $row["fname"] . "</td><td>" . $row["lname"] . "</td><td>" . $row["Phone"] . "</td><td>" . $row["Email"] . "</td><td>" . $row["details"] . "</td><td>" . $row["optradio"] . "</td></tr>";
+                }
+                echo "</table>";
+            } else {
+                echo "0 result";
+            }
+
+            $conn->close();
+            ?>
+        </table>
+
+
         <!-- //contact -->
 
         <!-- footer -->	
