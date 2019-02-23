@@ -1,21 +1,27 @@
+<?php
+session_start();
+session_destroy();
+?>
 <!DOCTYPE html>
-<html lang="en">
-    <head>
+<html lan
+      <head>
         <title>Eduversity Education Category Flat Bootstrap Responsive Website Template | Contact : W3layouts</title>
         <style>
-            table {
-                border-collapse: collapse;
-                width: 100%;
-                color: rgb(220, 53, 69);
-                font-size: 15px;
-                text-align: center;
-            } 
-            th {
-                background-color: rgb(85, 85, 85);
-                color: white;
-            }
-            tr:nth-child(even) {background-color: #f2f2f2}
+            #output_image{ width:100px; height:100px;}
         </style>
+
+        <script type='text/javascript'>
+            function preview_image(event)
+            {
+                var reader = new FileReader();
+                reader.onload = function ()
+                {
+                    var output = document.getElementById('output_image');
+                    output.src = reader.result;
+                }
+                reader.readAsDataURL(event.target.files[0]);
+            }
+        </script>
     </head>
     <?php include_once './includes/global_css.php'; ?>
     <body>
@@ -35,8 +41,9 @@
         <!-- //breadcrumbs -->
 
         <!-- contact -->
-        <?php include_once './includes/contact_form.php'; ?>	
+        <?php include_once './includes/contact1.php'; ?>	
         <!-- //contact -->
+
 
         <!-- footer -->	
         <footer>

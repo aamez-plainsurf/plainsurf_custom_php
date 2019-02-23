@@ -1,3 +1,4 @@
+
 <section class="contact py-5">
     <div class="container py-sm-3">
         <h3 class="heading text-capitalize mb-lg-5 mb-4"> Contact Us - <span>Get In Touch</span> </h3>
@@ -45,66 +46,60 @@
         </div>
         <div class="form row py-5">
             <div class="col-lg-6 contact-form">
-
-                <form action="../connector_form.php" method="POST">
+                <form action="../connector/process.php" method="POST" enctype='multipart/form-data'>
                     <div class="row">
-                        <div class="col-lg-6 fields-grid">
+                        <div class="fields-grid col-lg-6">
                             <div class="styled-input agile-styled-input-top">
-                                <input type="text" name="fname" required=""> 
+
+                                <input type="text" name="first_name" required=""> 
                                 <label>First Name</label>
+                                <span></span>
                             </div> 
-                        </div>
-                        <div class="col-lg-6 fields-grid">
-                            <div class="styled-input agile-styled-input-top">
-                                <input type="text" name="lname" required=""> 
-                                <label>Last Name</label>
-                            </div> 
-                        </div>
-                    </div>
-
-                    <div class="row">
-                        <div class="col-lg-6">
                             <div class="styled-input">
-                                <input type="tel" name="Phone" required="">
-                                <label>Mobile</label>
+                                <input type="email" name="email_id" required="">
+                                <label>Email Address</label>
                                 <span></span>
                             </div>
+
                         </div>
-                        <div class="col-lg-6">
+                        <div class="fields-grid col-lg-6">
+                            <div class="styled-input agile-styled-input-top">
+
+                                <input type="text" name="last_name" required=""> 
+                                <label>last Name</label>
+                                <span></span>
+                            </div> 
                             <div class="styled-input">
-                                <input type="email" name="Email" required="">
-                                <label>Email</label>
+                                <input type="tel" name="phone_no" required="">
+                                <label>phone number</label>
+                                <span></span>
                             </div>
+
+
                         </div>
+
                     </div>
 
-                    <div class="row">
-                        <div class="col-lg-12">
-                            <div class="styled-input mt-3">
-                                <textarea name="details"></textarea>
-                                <label class="text">Discription</label>
-                            </div>
-                        </div>
+                    <div class="styled-input">
+
+                        <input type="text" name="description" required=""><label>Description</label>
+
                     </div>
 
-                    <div class="row">
-                        <div class="col-lg-12">
-                            <label class="radio-inline"><input type="radio" name="optradio" value="Friends" checked>Friends</label>
-                            <label class="radio-inline px-4"><input type="radio" name="optradio" value="Site">Site</label>
-                            <label class="radio-inline px-4"><input type="radio" name="optradio" value="Other">Other</label>
-                        </div>
-                    </div>
+                    <input class="px-3" type="radio" name="opt" value="friends">friends &nbsp;
+                    <input class="px-3" type="radio" name="opt" value="social">social &nbsp;
+                    <input class="px-3" type="radio" name="opt" value="others">others<br>&nbsp;
+
+                    <input type="file" name="myfile" accept="image/*" onchange="preview_image(event)" id="fileToUpload">
+                    <img id="output_image"/>
+                    <input type="submit" name="submit" value="submit" >
 
 
-                    <div class="py-5"> 
-                        <input type="submit" value="Submit" name="submit">
-                    </div>
-                    
+
                 </form>
 
 
             </div>
-
             <div class="col-lg-6 mt-lg-0 mt-5">
                 <div class="bg-img">
                     <div class="contact-layer">
