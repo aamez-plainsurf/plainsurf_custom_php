@@ -9,11 +9,11 @@ if ($conn->connect_error) {
 //upload file in folder
 
 $currentDir = getcwd();
-$uploadDirectory = "/uploads/" . $random_digit;
+$uploadDirectory = "/uploads/";
 
 $errors = []; // Store all foreseen and unforseen errors here
 
-$fileExtensions = ['pdf', 'doc', 'docx']; // Get all the file extensions
+$fileExtensions = ['pdf', 'doc', 'docx', 'png', 'jpeg', 'JPEG']; // Get all the file extensions
 
 $fileName = $_FILES['myfile']['name'];
 $fileSize = $_FILES['myfile']['size'];

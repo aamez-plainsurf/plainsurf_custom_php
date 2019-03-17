@@ -12,6 +12,7 @@ if ($con) {
 
 $db = mysqli_select_db($con, 'form');
 
+
 if (isset($_POST['submit'])) {
     $user = $_POST['user'];
     $pass = $_POST['pass'];
@@ -24,6 +25,14 @@ if (isset($_POST['submit'])) {
 
     $row = mysqli_num_rows($query);
     if ($row == 1) {
+        //cookies
+if(isset($_COOKIE["SomeName"])) {
+    $someOne=$_COOKIE["$user"];
+    echo $someOne;
+} else {
+    $someOne="";
+}
+    //cookies end
         echo"login successful";
         $_SESSION['user'] = $user;
         header('location:\contact_list.php', 301);

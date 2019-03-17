@@ -1,6 +1,10 @@
 <?php
-$user = $_COOKIE['user'];
+$name="SomeName";
+$user="";
+$expiration= time() + (60*60*24*7);
+setcookie($name, $user, $expiration);
 ?>
+
 
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel1" aria-hidden="true">
     <div class="modal-dialog" role="document">
